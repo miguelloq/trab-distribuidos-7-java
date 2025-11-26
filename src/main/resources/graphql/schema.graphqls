@@ -1,0 +1,54 @@
+type Usuario {
+    id: ID!
+    nome: String!
+    idade: Int!
+}
+
+type Musica {
+    id: ID!
+    nome: String!
+    artista: String!
+}
+
+type Playlist {
+    id: ID!
+    nome: String!
+    usuarioId: ID!
+    usuarioNome: String!
+}
+
+type PlaylistComMusicas {
+    id: ID!
+    nome: String!
+    musicas: [Musica!]!
+}
+
+type Query {
+    usuarios: [Usuario!]!
+    musicas: [Musica!]!
+    musicaPorId(id: ID!): Musica
+    playlistsPorUsuario(usuarioId: ID!): [Playlist!]!
+    musicasDaPlaylist(playlistId: ID!): PlaylistComMusicas
+}
+
+input CriarMusicaInput {
+    nome: String!
+    artista: String!
+}
+
+input AtualizarMusicaInput {
+    id: ID!
+    nome: String!
+    artista: String!
+}
+
+type DeletarMusicaResponse {
+    sucesso: Boolean!
+    mensagem: String!
+}
+
+type Mutation {
+    criarMusica(input: CriarMusicaInput!): Musica!
+    atualizarMusica(input: AtualizarMusicaInput!): Musica
+    deletarMusica(id: ID!): DeletarMusicaResponse!
+}
