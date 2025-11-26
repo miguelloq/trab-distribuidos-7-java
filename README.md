@@ -1,6 +1,6 @@
 # Music Streaming Service - REST API - JAVA
 
-API REST desenvolvida em Kotlin com Spring Boot para gerenciamento de um serviço de streaming de músicas.
+API REST desenvolvida em Java com Spring Boot para gerenciamento de um serviço de streaming de músicas.
 
 ## Modelo de Dados
 
