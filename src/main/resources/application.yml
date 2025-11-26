@@ -1,9 +1,9 @@
 spring:
   application:
-    name: music-streaming-service
-  
+    name: music-streaming-service-java
+
   datasource:
-    url: jdbc:postgresql://localhost:5432/musicdb
+    url: jdbc:postgresql://localhost:5433/musicdb
     username: admin
     password: admin123
     driver-class-name: org.postgresql.Driver
