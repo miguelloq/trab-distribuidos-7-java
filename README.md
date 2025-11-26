@@ -25,7 +25,7 @@ docker-compose logs -f app
 ## Notas
 
 - **8081**: REST API (context path: `/api`)
-- **9090**: gRPC server
+- **9091**: gRPC server
 - **8081/graphql**: GraphQL endpoint
 - **8081/graphiql**: GraphiQL UI
 - **8081/ws**: SOAP endpoint
